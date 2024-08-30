@@ -1,7 +1,9 @@
 package org.example;
 
+import com.example.controller.ResponseData;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.squareup.javapoet.*;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
@@ -50,7 +52,7 @@ public class Main {
                         .build();
                 MethodSpec methodSpec = MethodSpec.methodBuilder(api.methodName)
                         .addAnnotation(requestMapping)
-                        .addStatement("System.out.println(\"Hello\")")
+                        .addStatement("$T resData = helper.methodName()", ResponseData.class)
                         .addParameter(nameParameter)
                         .build();
 

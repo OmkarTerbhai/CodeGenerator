@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 class Demo {
   @GetMapping("/ping")
   void ping(@RequestParam("id") String id) {
-    System.out.println("Hello");
+    ResponseData resData = helper.methodName();
   }
 
   @PostMapping("/ping2")
   void ping2(@RequestBody String id) {
-    System.out.println("Hello");
+    ResponseData resData = helper.methodName();
   }
 }
