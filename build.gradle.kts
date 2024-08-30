@@ -19,6 +19,13 @@ dependencies {
     // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
     implementation("com.fasterxml.jackson.core:jackson-databind:2.17.2")
 
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    implementation("org.projectlombok:lombok:1.18.34")
+
+    // https://mvnrepository.com/artifact/org.springframework/spring-web
+    implementation("org.springframework:spring-web:6.1.12")
+
+
 }
 
 tasks.test {
